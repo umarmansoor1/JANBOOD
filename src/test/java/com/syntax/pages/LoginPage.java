@@ -23,6 +23,9 @@ public class LoginPage extends BaseClass{
 	@FindBy(id="spanMessage")
 	public WebElement errorMessage;
 	
+	@FindBy(xpath="//img[@src='/webres_5acde3dbd3adc6.90334155/themes/default/images/logo.png']")
+	public static WebElement loginSuccess;
+	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
