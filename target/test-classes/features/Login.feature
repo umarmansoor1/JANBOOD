@@ -20,4 +20,8 @@ Feature: Login feature
       | Monkey   | admin123  | Invalid credentials      |
       | Monkey   | Monkey123 | Invalid credentials      |
       |          | admin123  | Username cannot be empty |
+<<<<<<< HEAD
       | Admin    |           | Password cannot be empty |
+=======
+      | Admin    |           | Password cannot be empty |
+>>>>>>> branch 'master' of https://github.com/umarmansoor1/JANBOOD.git
