@@ -23,12 +23,10 @@ public class LoginPage extends BaseClass{
 	@FindBy(id="spanMessage")
 	public WebElement errorMessage;
 	
-<<<<<<< HEAD
+
 	@FindBy(xpath="//img[@src='/webres_5acde3dbd3adc6.90334155/themes/default/images/logo.png']")
 	public static WebElement loginSuccess;
 	
-=======
->>>>>>> branch 'master' of https://github.com/umarmansoor1/JANBOOD.git
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}

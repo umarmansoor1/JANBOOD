@@ -154,7 +154,6 @@ public class ReportsPageSteps extends BaseClass {
             Thread.sleep(1000);
             if (data.contains("Syntax")) {
                 Thread.sleep(1000);
-                //WebElement edit = BaseClass.driver.findElement(By.xpath("//table[@id='resultTable']/tbody/tr[" + i + "]/td[4]"));
                 WebElement edit = BaseClass.driver.findElement(By.xpath("//td[text()='Syntax']//following-sibling::td//following-sibling::td//child::a"));
                 Actions act = new Actions(driver);
                 act.moveToElement(edit).doubleClick().perform();
@@ -165,11 +164,8 @@ public class ReportsPageSteps extends BaseClass {
 	@When("^Select Selection Criteria to Age Group and add Age Group$")
 	public void select_Selection_Criteria_to_Age_Group_and_add_Age_Group() throws Exception {
 		report = new ReportPage();
-		Thread.sleep(1000);
 		CommonMethods.click(report.selectCriteriadDropDown);
-		Thread.sleep(1000);
 		CommonMethods.dropDownSelect(report.selectCriteriadDropDown, "Age Group");
-		Thread.sleep(1000);
 		CommonMethods.click(report.selectCriteria_addButton);
 	}
 	
@@ -184,7 +180,6 @@ public class ReportsPageSteps extends BaseClass {
 	@When("^Select Selection Criteria to Location and add Location$")
 	public void select_Selection_Criteria_to_Location_and_add_Location() throws Exception {
 		report = new ReportPage();
-		Thread.sleep(1000);
 		CommonMethods.dropDownSelect(report.selectCriteriadDropDown, "Location");
 		CommonMethods.click(report.selectCriteria_addButton);
 	}
@@ -192,7 +187,8 @@ public class ReportsPageSteps extends BaseClass {
 	@When("^Select the location from the default menu$")
 	public void select_the_location_from_the_default_menu() throws Exception {
 		report = new ReportPage();
-        WebElement locate=driver.findElement(By.xpath("//select[@id='location']//following-sibling::option[8]"));
+        WebElement locate=driver.findElement(By.xpath("//select[@id='location']//following-sibling::option[4]"));
+        Thread.sleep(500);
         locate.click();
 	}
 
